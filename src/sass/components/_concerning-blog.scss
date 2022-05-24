@@ -1,0 +1,38 @@
+.concerning-blog {
+   position: sticky;
+   top: $header-shrink-height;
+
+   &__title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 20px;
+   }
+
+   &__item {
+      margin-bottom: 20px;
+
+      a {
+         @include flex(center, center);
+      }
+
+      &__image {
+         margin-right: 10px;
+
+         img { 
+            width: 60px;
+            height: 60px;
+         }
+      }
+
+      &__sortDesc {
+         width: 75%;
+         max-height: 70px;
+         // white-space: nowrap;
+         overflow: hidden;
+         text-overflow: ellipsis;
+         font-size: 0.875rem;
+         color: $txt-second-color;
+      }
+   }
+}

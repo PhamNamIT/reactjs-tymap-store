@@ -1,0 +1,25 @@
+.blog {
+   margin-bottom: 50px;
+   font-family: 'M PLUS Rounded 1c', sans-serif;
+
+   &__content {
+      margin-right: 20px;
+
+      @include tablet {
+         background-color: $main-color;
+         padding: 1rem;
+         box-shadow: $box-shadow;
+      }
+   }
+
+   &__filter {
+      .concerning-blog {
+         @include flex(center, flex-start);
+         flex-direction: row;
+
+         &__item {
+            width: 30%;
+         }
+      }
+   }
+}

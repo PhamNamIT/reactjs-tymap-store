@@ -1,0 +1,25 @@
+.section {
+   margin-bottom: 40px;
+
+   & > * ~ * {
+      margin-top: 50px;
+   }
+
+   &__title {
+      font-size: 2.5rem;
+      font-weight: 600;
+      text-transform: capitalize;
+      text-align: center;
+      transform: translateY(50%);
+      transition: transform 0.5s ease;
+   }
+
+   &__title:hover {
+      transform: translateY(0);
+   }
+
+   &__title:hover span {
+      color: $main-color;
+      text-shadow: 0 0 30px $main-color;
+   }
+}

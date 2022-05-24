@@ -1,0 +1,80 @@
+.catalog {
+   @include flex(flex-start, flex-start);
+
+   @include tablet {
+      flex-direction: column;
+   }
+
+   &__filter {
+      width: 20%;
+      margin-right: 20px;
+
+      @include tablet {
+         width: max-content;
+         height: 100vh;
+         background-color: $main-color;
+         padding: 1rem;
+         position: fixed;
+         left: 0;
+         top: $header-tablet-height;
+         box-shadow: $box-shadow;
+         z-index: 100;
+         transform: translateX(-100%);
+         transition: transform 0.3s ease;
+      }
+
+      @include mobile {
+         top: $header-mobile-height;
+      }
+
+      &.active {
+         transform: translateX(0);
+      }
+
+      &__close {
+         display: none;
+
+         @include tablet {
+            display: block;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+         }
+      }
+
+      &__widget {
+         margin-bottom: 2rem;
+
+         &__title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            text-transform: capitalize;
+            margin-bottom: 16px;
+         }
+
+         &__content {
+            color: $txt-second-color;
+
+            &__item {
+               margin-bottom: 13px;
+            }
+         }
+      }
+
+      &__toggle {
+         display: none;
+
+         @include tablet {
+            display: block;
+            margin-bottom: 2rem;
+         }
+      }
+   }
+
+   &__content {
+      flex-grow: 1;
+
+      @include tablet {
+         width: 100%;
+      }
+   }
+}

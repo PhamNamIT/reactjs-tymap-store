@@ -1,0 +1,67 @@
+.blog-view {
+   @include flex(flex-start, flex-start);
+   margin-bottom: 50px;
+   font-family: 'M PLUS Rounded 1c', sans-serif;
+   
+   &__main {
+      width: 80%;
+
+      &__title {
+         font-size: 3rem;
+         font-weight: 600;
+         margin-bottom: 20px;
+         text-align: center;
+      }
+
+      &__content {
+         font-size: 1.5rem;
+         text-align: center;
+
+         p {
+            margin-bottom: 10px;
+            text-align: left;
+         }
+
+         .note {
+            width: 50%;
+            font-size: 1.875rem;
+            color: $main-color;
+            border-top: 1px solid $main-color;
+            margin: 10px auto;
+            padding-top: 20px;
+            text-align: center;
+         }
+
+         .note.first {
+            margin-top: 50px;
+         }
+
+         img {
+            width: 500px;
+            height: 500px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+         }
+
+         h4 {
+            font-size: 1.875rem;
+            text-align: left;
+            margin-top: 40px;
+            margin-bottom: 10px;
+         }
+
+         ul {
+            list-style-type: disc;
+
+            li {
+               text-align: left;
+               margin-bottom: 10px;
+            }
+         }
+      }
+   }
+
+   .widget {
+      width: 20%;
+   }
+}

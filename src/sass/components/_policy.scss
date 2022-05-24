@@ -1,0 +1,52 @@
+.policy {
+   font-family: 'M PLUS Rounded 1c', sans-serif;
+   margin-bottom: 50px;
+
+   &__title {
+      font-size: 4rem;
+      font-weight: 600;
+      color: $main-color;
+      text-align: center;
+      margin-bottom: 20px;
+   }
+
+   &__content {
+      margin-bottom: 20px;
+   }
+
+   &__item {
+      &__title {
+         font-size: 1.5rem;
+         font-weight: 600;
+         margin-bottom: 20px;
+      }
+
+      &__content {
+         ul {
+            list-style-type: disc;
+
+            li {
+               font-size: 1.25rem;
+               font-weight: 500;
+               margin-left: 50px;
+               margin-bottom: 10px;
+               line-height: 2rem;
+            }
+         }
+
+         h4 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            margin-left: 50px;
+         }
+      }
+   }
+
+   p {
+      font-size: 1.25rem;
+      font-weight: 500;
+      margin-bottom: 10px;
+      line-height: 2rem;
+   }
+}

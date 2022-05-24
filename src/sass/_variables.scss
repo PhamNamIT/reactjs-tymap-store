@@ -1,0 +1,38 @@
+$main-bg: #fff;
+$main-color: #4267b2;
+
+$txt-main-color: #000;
+$txt-second-color: #606060;
+$txt-white: #fff;
+
+$btn-main-bg: $main-color;
+$btn-main-color: #fff;
+
+$header-height: 120px;
+$header-shrink-height: 80px;
+$header-tablet-height: 70px;
+$header-tablet-shrink-height: 40px;
+$header-mobile-height: 40px;
+$header-mobile-shrink-height: 40px;
+
+$box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+$colors: (
+  "blue": #4267b2,
+  "orange": #fbb96b,
+  "pink": #fe7e73,
+  "white": #fff,
+  "black": #000,
+  "gris": #808080,
+  "red": #ff0000,
+  "yellow": #ffff00,
+  "god": #ede15e,
+  aqua: #00c3ff,
+  "main": $main-color
+);
+
+$numbers: (0, 1, 2, 3, 4, 5, 6, 7, 8);
+
+$tablet-width: 1024px;
+$mobile_tablet-width: 330px;
+$mobile-width: 768px;

@@ -1,0 +1,181 @@
+.check-out {
+   font-family: 'M PLUS Rounded 1c', sans-serif;
+   
+   &__item {
+      margin: 20px 0;
+      padding: 20px;
+      box-shadow: $box-shadow;
+
+      &__info {
+         // @include flex(flex-start, flex-start);
+
+         &__title {
+            margin-bottom: 10px;
+            color: $main-color;
+
+            svg {
+               margin-right: 10px;
+               font-size: 1.25rem;
+            }
+
+            span {
+               font-size: 1.5rem;
+               font-weight: 600;
+            }
+         }
+
+         &__content {
+            input {
+               width: 95%;
+               margin-left: 10px;
+               padding: 5px 10px;
+               outline: none;
+               border: none;
+               border-bottom: 0.5px solid;
+               font-size: 1.25rem;
+            }
+
+            svg {
+               font-size: 1.25rem;
+               margin-left: 10px;
+            }
+         }
+      }
+
+      &__info:first-child {
+         margin-bottom: 20px;
+      }
+
+      &__product {
+         &__title {
+            font-size: 1.875rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+         }
+
+         &__content {
+            .cart__item {
+               margin-left: 20px;
+
+               &__image {
+                  margin-right: 50px;
+                  
+                  img {
+                     height: 150px;
+                  }
+               }
+
+               &__info {
+                  &__name,
+                  &__price {
+                     font-size: 1.5rem;
+                  }
+               }
+            }
+         }
+      }
+
+      &__total {
+         @include flex(flex-start, space-between);
+
+         &__note {
+            font-size: 1.5rem;
+            width: 50%;
+
+            span {
+               margin-right: 20px;
+            }
+
+            input {
+               width: 70%;
+               padding: 10px 5px;
+               font-size: 1.25rem;
+               outline: none;
+            }
+         }
+
+         &__product {
+            font-size: 1.25rem;
+            line-height: 2.5rem;
+
+            span:first-child {
+               margin-right: 20px;
+            }
+
+            .price {
+               font-size: 1.875rem;
+               color: $main-color;
+            }
+         }
+      }
+
+      &__shipping-method {
+         @include flex(flex-start, flex-start);
+         margin-top: 20px;
+         margin-bottom: 20px;
+
+         &__title {
+            font-size: 1.5rem;
+            line-height: 2.5rem;
+            margin-right: 20px;
+         }
+
+         &__content {
+            font-size: 1.25rem;
+            line-height: 2.5rem;
+
+            .custom-checkbox {
+               border: 0.5px solid;
+               box-shadow: $box-shadow;
+               padding: 0 10px;
+
+               &__checkmark {
+                  width: 20px;
+                  height: 20px;
+                  line-height: 2rem;
+               }
+            }
+         }
+      }
+
+      &__payment {
+         margin: 20px 0;
+
+         &__total {
+            @include flex(center, flex-end);
+            margin-bottom: 20px;
+            font-size: 1.25rem;
+            line-height: 2.5rem;
+
+            &__item {
+               &__title {
+                  margin-right: 100px;
+               }
+
+               &__title.check-out__total {
+                  margin-right: 50px; 
+               }
+
+               &__value {
+                  font-size: 1.2rem;
+                  text-align: right;
+               }
+
+               &__value.check-out__total {
+                  font-size: 2rem;
+                  text-align: left;
+                  color: $main-color;
+               }
+            }
+         }
+
+         &__confirm {
+            @include flex(center, space-between);
+
+            span a {
+               font-weight: 600;
+            }
+         }
+      }
+   }
+}

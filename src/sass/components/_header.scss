@@ -1,0 +1,199 @@
+.header {
+   width: 100%;
+   height: $header-height;
+   background-color: $main-bg;
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 99;
+   transition: height 0.3s ease;
+
+   @include tablet {
+      height: $header-tablet-height;
+      box-shadow: $box-shadow;
+   }
+
+   @include mobile {
+      height: $header-mobile-height;
+      box-shadow: $box-shadow;
+   }
+
+   .container {
+      height: 100%;
+   }
+
+   &.shrink {
+      height: $header-shrink-height;
+      box-shadow: $box-shadow;
+      z-index: 100;
+
+      @include tablet {
+         height: $header-tablet-shrink-height;
+      }
+
+      @include mobile {
+         height: $header-mobile-shrink-height;
+      }
+
+      .container .header__logo {
+         @include tablet {
+            img {
+               height: $header-tablet-shrink-height;
+            }
+         }
+      }
+   }
+
+   &__logo {
+      @include flex(center, center);
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+
+      img {
+         height: $header-shrink-height;
+      }
+
+      @include tablet {
+         img {
+            height: $header-tablet-height;
+         }
+      }
+
+      @include mobile {
+         img {
+            height: $header-mobile-height;
+         }
+      }
+   }
+
+   &__menu {
+      @include flex(center, space-between);
+      height: 100%;
+      font-size: 1.5rem;
+      font-weight: 600;
+
+      &__item ~ &__item {
+         margin-left: 40px;
+
+         @include tablet {
+            margin-left: 20px;
+         }
+
+         @include mobile {
+            margin-left: 10px;
+         }
+      }
+
+      &__item.active {
+         font-weight: bolder;
+         color: $main-color;
+      }
+
+      &__item:hover {
+         font-size: 1.5rem;
+         color: $main-color;
+      }
+
+      &__left,
+      &__right {
+         @include flex(center, center);
+         height: 100%;
+      }
+
+      &__mobile-toggle {
+         display: none;
+
+         @include tablet {
+            display: block;
+         }
+      }
+
+      &__left {
+         &__close {
+            display: none;
+         }
+
+         @include tablet {
+            width: 100%;
+            height: 100vh;
+            background-color: $main-bg;
+            position: absolute;
+            left: 0;
+            top: 0;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding-top: 30px;
+            transform: translateX(-100%);
+            transition: transform 0.5s ease;
+
+            &.active {
+               width: 50%;
+               transform: translateX(0);
+            }
+
+            &__item ~ &__item {
+               margin-left: unset;
+               margin-top: 20px;
+            }
+
+            &__close {
+               display: block;
+               position: absolute;
+               left: 0;
+               top: -2px;
+               font-size: 2.5rem;
+            }
+         }
+      }
+
+      &__right {
+         font-size: 1.5rem;
+
+         &__item {
+            @include flex(center, center);
+
+            @include tablet {
+               margin-left: 10px;
+            }
+
+            &__toggle {
+               display: none;
+               max-width: 500px;
+               position: relative;
+
+               svg {
+                  font-size: 2.5rem;
+                  position: absolute;
+                  left: -12%;
+                  top: 1px;
+                  border-radius: 5px;
+                  color: rgba(250, 0, 0, 0.7);
+               }
+
+               input {
+                  border: 2px solid $main-color;
+                  border-radius: 10px;
+                  outline: none;
+                  font-size: 1.25rem;
+                  padding: 0.5rem 1rem;
+                  margin-left: 10px;
+               }
+            }
+
+            &.active &__search-icon {
+               display: none;
+            }
+
+            &.active &__toggle {
+               display: block;
+            }
+         }
+
+
+         @include mobile {
+            font-size: 1.25rem;
+         }
+      }
+   }
+}

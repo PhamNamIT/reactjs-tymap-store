@@ -1,0 +1,23 @@
+@import './variables';
+@import './mixins';
+@import './base';
+/* Sấp xếp đúng thứ tự import tránh lỗi */
+
+@import '/src/sass/components/header';
+@import '/src/sass/components/footer';
+@import '/src/sass/components/button';
+@import '/src/sass/components/hero-slider';
+@import '/src/sass/components/section';
+@import '/src/sass/components/policy-card';
+@import '/src/sass/components/product';
+@import '/src/sass/components/cart';
+@import '/src/sass/components/custom-checkbox';
+@import '/src/sass/components/catalog';
+@import '/src/sass/components/product-card';
+@import '/src/sass/components/policy';
+@import '/src/sass/components/product-view-modal';
+@import '/src/sass/components/blog-card';
+@import '/src/sass/components/blog-view';
+@import '/src/sass/components/concerning-blog';
+@import '/src/sass/components/blog';
+@import '/src/sass/components/check-out';

@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   user-select: none;
+}
+
+html {
+   font-size: 13px;
+
+   @include tablet {
+      font-size: 11px;
+   }
+}
+
+body {
+   font-family: "Roboto", sans-serif;
+}
+
+ul {
+   list-style-type: none;
+}
+
+a {
+   text-decoration: none;
+   color: unset;
+}
+
+a:hover {
+   color: $main-color;
+}
+
+img {
+   max-width: 100%;
+}
+
+@each $color, $var in $colors {
+   .color-#{$color} {
+      color: $var;
+   }
+
+   .bg-#{$color} {
+      background-color: $var;
+   }
+}
+
+@each $var in $numbers {
+   .grid-col-#{$var} {
+      grid-template-columns: repeat($var, 1fr);
+   }
+}
+
+@each $var in $numbers {
+   .grid-col-md-#{$var} {
+      @include tablet {
+         grid-template-columns: repeat($var, 1fr);
+      }
+   }
+}
+
+@each $var in $numbers {
+   .grid-col-sm-#{$var} {
+      @include mobile {
+         grid-template-columns: repeat($var, 1fr);
+      }
+   }
+}
+
+.container {
+   width: 100%;
+   max-width: 1620px;
+   padding: 0 50px;
+   margin: auto;
+
+   @include tablet {
+      padding: 0 20px;
+   }
+
+   @include mobile {
+      padding: 0 10px;
+   }
+}
+
+.main {
+   margin-top: $header-height;
+   margin-bottom: 2rem;
+   min-height: 100vh;
+
+   @include tablet {
+      margin-top: calc(#{$header-tablet-height} + 20px);
+   }
+
+   @include mobile {
+      margin-top: calc(#{$header-mobile-height} + 10px);
+   }
+}
+
+.grid {
+   display: grid;
+}
+
+.bg-main {
+   background-color: $main-color;
+}
+
+.btn {
+   border-radius: 1.2rem;
+}
+
+.italic {
+   font-style: italic;
+}
