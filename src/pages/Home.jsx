@@ -11,11 +11,21 @@ import ProductCard from '../components/ProductCard'
 import BlogCard from '../components/BlogCard'
 
 import heroSliderData from '../assets/fake-data/hero-slider'
-import policy from '../assets/fake-data/policy'
+import policyData from '../assets/fake-data/policy'
 import productData from '../assets/fake-data/product'
 import blogData from '../assets/fake-data/blog'
 
 const Home = () => {
+
+   const policy = policyData.getAllPolicy()
+
+   if (policy === undefined) policy = {
+      name: "",
+      icon: "",
+      description: "",
+      slug: "/"
+   }
+
    return (
       <Helmet title="Trang chủ">
          {/** Hero Slider */}
@@ -32,7 +42,7 @@ const Home = () => {
                >
                   {
                      policy.map((item, index) => (
-                        <Link to={`policy/${item.path}`} key={index}>
+                        <Link to={`policy/${item.slug}`} key={index}>
                            <PolicyCard
                               name={item.name}
                               description={item.description}
