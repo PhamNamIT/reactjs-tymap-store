@@ -6,7 +6,6 @@
    height: 100%;
    padding-top: 10px;
    overflow: auto;
-   background-color: rgb(0, 0, 0);
    background-color: rgba($color: #000000, $alpha: 0.4);
    opacity: 0;
    visibility: hidden;
@@ -15,6 +14,14 @@
    &.active {
       opacity: 1;
       visibility: visible;
+   }
+
+   .toggle {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
    }
 
    &__content {
@@ -26,6 +33,7 @@
       opacity: 0;
       transform: translateY(-250px);
       transition: transform 0.3s ease;
+      z-index: 102;
 
       &__close {
          position: absolute;
