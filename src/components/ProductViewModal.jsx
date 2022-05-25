@@ -22,6 +22,7 @@ const ProductViewModal = () => {
 
    return (
       <div className={`product-view__modal ${product === undefined ? '' : 'active'}`}>
+         <div className="toggle" onClick={() => dispatch(remove())} ></div>
          <div className="product-view__modal__content">
             <ProductView product={product}/>
             <div className="product-view__modal__content__close">
