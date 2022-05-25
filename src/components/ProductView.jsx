@@ -50,7 +50,7 @@ const ProductView = (props) => {
          price: product.price,
          quantity: quantity
       }))
-      alert('Success')
+      alert(`${quantity} Sản phẩm được thêm vào giỏ`)
    }
 
    const history = useNavigate()

@@ -52,7 +52,7 @@ const InfinityList = (props) => {
             col={4}
             mdCol={4}
             smCol={2}
-            gap={20}
+            gap={10}
          >
             {
                data.map((item, index) => (
