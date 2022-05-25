@@ -70,16 +70,19 @@
          flex-grow: 1;
 
          &__name {
-            width: 40%;
+            width: 100%;
+            
          }
 
          &__name,
          &__price {
             font-size: 1.25rem;
+            margin-right: 20px;
          }
 
          &__del {
             font-size: 1.5rem;
+            margin-left: 50px;
 
             svg {
                cursor: pointer;
