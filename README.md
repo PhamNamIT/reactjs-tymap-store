@@ -1,1 +1,1 @@
-# ti-map-store
+# ty-map-store
